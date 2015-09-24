@@ -21,8 +21,7 @@ Suite Set Up
 	Log	Starting test
     
 Clean Up Test
-	[Documentation]	Clean up resources when the case ends.
-	Run Keyword And Ignore Error	Capture Page Screenshot 	 
+	[Documentation]	Clean up resources when the case ends.	 
 	Run Keyword And Ignore Error	Close Browser
 
 Clean Up Suite
