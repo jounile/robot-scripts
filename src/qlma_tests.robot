@@ -7,7 +7,6 @@ Suite Setup	Suite Set Up
 
 
 
-
 *** Test Cases ***
 
 Login to Qlma client
