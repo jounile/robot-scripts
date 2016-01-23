@@ -34,13 +34,13 @@ Clean Up Suite
 
 
 Open Login Page
-       [Documentation]	All browsers should be closed when the tests end.
-       Open Browser  ${SERVER}	${BROWSER}
-       Maximize Browser Window
-       Set Selenium Speed	${DELAY}
-       Title Should Be	Qlma client
-       Page Should Contain	KÄYTTÄJÄTUNNUS
-       Page Should Contain	SALASANA
+	[Documentation]	All browsers should be closed when the tests end.
+	Open Browser  ${SERVER}	${BROWSER}
+	Maximize Browser Window
+	Set Selenium Speed	${DELAY}
+	Title Should Be	Qlma client
+	Page Should Contain	KÄYTTÄJÄTUNNUS
+	Page Should Contain	SALASANA
 
 Login User
 	[Documentation]	Logs in a user to the shop. The main page should be open.
@@ -50,8 +50,3 @@ Login User
 	Click Element	css=input[value='KIRJAUDU']
 	Log Source
 	Wait Until Page Contains	Etusivu
-
-Go to Messages
-       [Documentation]	Logs in a user to the shop. The main page should be open.
-       Click Element	xpath=id('sidebar-wrapper')/ul/li[2]/a
-       Wait Until Page Contains	Viestit
