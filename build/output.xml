@@ -1,420 +1,194 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20150924 22:51:11.458" generator="Robot 2.7.6 (Python 2.7.10 on darwin)">
-<suite source="/Users/jounile/Git/robot-scripts/src" id="s1" name="Src">
-<suite source="/Users/jounile/Git/robot-scripts/src/qlma_tests.robot" id="s1-s1" name="Qlma Tests">
-<kw type="setup" name="qlma_keywords.Suite Set Up" timeout="">
+<robot generated="20160123 03:43:59.601" generator="Robot 3.0 (Python 2.7.10 on darwin)">
+<suite source="/Users/jouni.leino/Git/robot-scripts/src" id="s1" name="Src">
+<suite source="/Users/jouni.leino/Git/robot-scripts/src/qlma_tests.robot" id="s1-s1" name="Qlma Tests">
+<kw type="setup" name="Suite Set Up" library="qlma_keywords">
 <doc>Setting up the suite settings.</doc>
-<arguments>
-</arguments>
-<kw type="kw" name="BuiltIn.Log" timeout="">
+<kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>Starting test</arg>
 </arguments>
-<msg timestamp="20150924 22:51:12.604" level="INFO">Starting test</msg>
-<status status="PASS" endtime="20150924 22:51:12.604" starttime="20150924 22:51:12.603"></status>
+<msg timestamp="20160123 03:43:59.706" level="INFO">Starting test</msg>
+<status status="PASS" endtime="20160123 03:43:59.706" starttime="20160123 03:43:59.706"></status>
 </kw>
-<status status="PASS" endtime="20150924 22:51:12.604" starttime="20150924 22:51:12.603"></status>
+<status status="PASS" endtime="20160123 03:43:59.706" starttime="20160123 03:43:59.706"></status>
 </kw>
-<test id="s1-s1-t1" timeout="" name="Login to Qlma client">
-<kw type="kw" name="qlma_keywords.Open Login Page" timeout="">
+<test id="s1-s1-t1" name="Login to Qlma client">
+<kw name="Open Login Page" library="qlma_keywords">
 <doc>All browsers should be closed when the tests end.</doc>
-<arguments>
-</arguments>
-<kw type="kw" name="Selenium2Library.Open Browser" timeout="">
+<kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to given URL.</doc>
 <arguments>
 <arg>${SERVER}</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20150924 22:51:12.605" level="INFO">Opening browser 'firefox' to base url 'http://www.qlma.fi/client'</msg>
-<status status="PASS" endtime="20150924 22:51:22.070" starttime="20150924 22:51:12.605"></status>
+<msg timestamp="20160123 03:43:59.708" level="INFO">Opening browser 'firefox' to base url 'http://demo.qlma.fi:3000'</msg>
+<status status="PASS" endtime="20160123 03:44:02.271" starttime="20160123 03:43:59.707"></status>
 </kw>
-<kw type="kw" name="Selenium2Library.Maximize Browser Window" timeout="">
+<kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<arguments>
-</arguments>
-<status status="PASS" endtime="20150924 22:51:22.775" starttime="20150924 22:51:22.071"></status>
+<status status="PASS" endtime="20160123 03:44:02.814" starttime="20160123 03:44:02.271"></status>
 </kw>
-<kw type="kw" name="Selenium2Library.Set Selenium Speed" timeout="">
+<kw name="Set Selenium Speed" library="Selenium2Library">
 <doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
 <arguments>
 <arg>${DELAY}</arg>
 </arguments>
-<status status="PASS" endtime="20150924 22:51:22.776" starttime="20150924 22:51:22.776"></status>
+<status status="PASS" endtime="20160123 03:44:02.814" starttime="20160123 03:44:02.814"></status>
 </kw>
-<kw type="kw" name="Selenium2Library.Wait Until Page Contains" timeout="">
-<doc>Waits until `text` appears on current page.</doc>
-<arguments>
-<arg>Kirjautuminen</arg>
-</arguments>
-<status status="PASS" endtime="20150924 22:51:24.076" starttime="20150924 22:51:22.777"></status>
-</kw>
-<kw type="kw" name="Selenium2Library.Title Should Be" timeout="">
+<kw name="Title Should Be" library="Selenium2Library">
 <doc>Verifies that current page title equals `title`.</doc>
 <arguments>
-<arg>Kirjautuminen - QLMA Koulu</arg>
+<arg>Qlma client</arg>
 </arguments>
-<msg timestamp="20150924 22:51:24.628" level="INFO">Page title is 'Kirjautuminen - QLMA Koulu'.</msg>
-<status status="PASS" endtime="20150924 22:51:24.629" starttime="20150924 22:51:24.077"></status>
+<msg timestamp="20160123 03:44:03.324" level="INFO">Page title is 'Qlma client'.</msg>
+<status status="PASS" endtime="20160123 03:44:03.324" starttime="20160123 03:44:02.814"></status>
 </kw>
-<kw type="kw" name="Selenium2Library.Page Should Contain" timeout="">
+<kw name="Page Should Contain" library="Selenium2Library">
 <doc>Verifies that current page contains `text`.</doc>
 <arguments>
 <arg>KÄYTTÄJÄTUNNUS</arg>
 </arguments>
-<msg timestamp="20150924 22:51:25.716" level="INFO">Current page contains text 'KÄYTTÄJÄTUNNUS'.</msg>
-<status status="PASS" endtime="20150924 22:51:25.717" starttime="20150924 22:51:24.629"></status>
+<msg timestamp="20160123 03:44:04.381" level="INFO">Current page contains text 'KÄYTTÄJÄTUNNUS'.</msg>
+<status status="PASS" endtime="20160123 03:44:04.381" starttime="20160123 03:44:03.324"></status>
 </kw>
-<kw type="kw" name="Selenium2Library.Page Should Contain" timeout="">
+<kw name="Page Should Contain" library="Selenium2Library">
 <doc>Verifies that current page contains `text`.</doc>
 <arguments>
 <arg>SALASANA</arg>
 </arguments>
-<msg timestamp="20150924 22:51:26.767" level="INFO">Current page contains text 'SALASANA'.</msg>
-<status status="PASS" endtime="20150924 22:51:26.767" starttime="20150924 22:51:25.717"></status>
+<msg timestamp="20160123 03:44:05.408" level="INFO">Current page contains text 'SALASANA'.</msg>
+<status status="PASS" endtime="20160123 03:44:05.409" starttime="20160123 03:44:04.381"></status>
 </kw>
-<kw type="kw" name="Selenium2Library.Page Should Contain" timeout="">
-<doc>Verifies that current page contains `text`.</doc>
-<arguments>
-<arg>UNOHTUIKO SALASANA?</arg>
-</arguments>
-<msg timestamp="20150924 22:51:27.796" level="INFO">Current page contains text 'UNOHTUIKO SALASANA?'.</msg>
-<status status="PASS" endtime="20150924 22:51:27.797" starttime="20150924 22:51:26.768"></status>
+<status status="PASS" endtime="20160123 03:44:05.409" starttime="20160123 03:43:59.707"></status>
 </kw>
-<status status="PASS" endtime="20150924 22:51:27.798" starttime="20150924 22:51:12.605"></status>
-</kw>
-<kw type="kw" name="qlma_keywords.Login User" timeout="">
+<kw name="Login User" library="qlma_keywords">
 <doc>Logs in a user to the shop. The main page should be open.</doc>
 <arguments>
 <arg>${VALID USER}</arg>
 <arg>${VALID PASSWD}</arg>
 </arguments>
-<kw type="kw" name="Selenium2Library.Input Text" timeout="">
+<kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
 <arg>css=input[type='text']</arg>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20150924 22:51:27.801" level="INFO">Typing text 'Matti Meikäläinen' into text field 'css=input[type='text']'</msg>
-<status status="PASS" endtime="20150924 22:51:29.455" starttime="20150924 22:51:27.801"></status>
+<msg timestamp="20160123 03:44:05.411" level="INFO">Typing text 'jouni' into text field 'css=input[type='text']'</msg>
+<status status="PASS" endtime="20160123 03:44:06.988" starttime="20160123 03:44:05.410"></status>
 </kw>
-<kw type="kw" name="Selenium2Library.Input Text" timeout="">
+<kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
 <arg>css=input[type='password']</arg>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20150924 22:51:29.457" level="INFO">Typing text 'qlma' into text field 'css=input[type='password']'</msg>
-<status status="PASS" endtime="20150924 22:51:31.045" starttime="20150924 22:51:29.456"></status>
+<msg timestamp="20160123 03:44:06.989" level="INFO">Typing text 'moikka' into text field 'css=input[type='password']'</msg>
+<status status="PASS" endtime="20160123 03:44:08.560" starttime="20160123 03:44:06.988"></status>
 </kw>
-<kw type="kw" name="Selenium2Library.Click Element" timeout="">
+<kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>css=input[value='KIRJAUDU']</arg>
 </arguments>
-<msg timestamp="20150924 22:51:31.046" level="INFO">Clicking element 'css=input[value='KIRJAUDU']'.</msg>
-<status status="PASS" endtime="20150924 22:51:33.107" starttime="20150924 22:51:31.046"></status>
+<msg timestamp="20160123 03:44:08.560" level="INFO">Clicking element 'css=input[value='KIRJAUDU']'.</msg>
+<status status="PASS" endtime="20160123 03:44:09.642" starttime="20160123 03:44:08.560"></status>
 </kw>
-<kw type="kw" name="Selenium2Library.Log Source" timeout="">
+<kw name="Log Source" library="Selenium2Library">
 <doc>Logs and returns the entire html source of the current page or frame.</doc>
-<arguments>
-</arguments>
-<msg timestamp="20150924 22:51:33.672" level="INFO">&lt;!DOCTYPE html&gt;
-&lt;html xmlns="http://www.w3.org/1999/xhtml" lang="en"&gt;&lt;head&gt;
-                &lt;meta charset="utf-8" /&gt;
+<msg timestamp="20160123 03:44:10.153" level="INFO">&lt;!DOCTYPE html&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" lang="en" ng-app="app" class="ng-scope"&gt;&lt;head&gt;&lt;style type="text/css"&gt;@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}&lt;/style&gt;
+        &lt;meta charset="utf-8" /&gt;
         &lt;meta content="IE=edge" http-equiv="X-UA-Compatible" /&gt;
         &lt;meta content="width=device-width, initial-scale=1" name="viewport" /&gt;
         &lt;meta content="" name="description" /&gt;
         &lt;meta content="" name="author" /&gt;
 
-        &lt;title&gt;Etusivu - QLMA Koulu&lt;/title&gt;
+        &lt;title&gt;Qlma client&lt;/title&gt;
 
-        &lt;!-- Bootstrap Core CSS --&gt;
         &lt;link rel="stylesheet" href="css/bootstrap.min.css" /&gt;
-
-        &lt;!-- Custom CSS --&gt;
         &lt;link rel="stylesheet" href="css/simple-sidebar.css" /&gt;
+        &lt;link rel="stylesheet" href="css/login.css" /&gt;
         &lt;link rel="stylesheet" href="css/style.css" /&gt;
-        &lt;link type="text/css" rel="stylesheet" href="font-awesome/css/font-awesome.min.css" /&gt;
-        
-        &lt;!-- Google Web Fonts --&gt;
-        &lt;link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300" /&gt;
 
-        &lt;!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --&gt;
-        &lt;!-- WARNING: Respond.js doesn't work if you view the page via file:// --&gt;
-        &lt;!--[if lt IE 9]&gt;
-            &lt;script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"&gt;&lt;/script&gt;
-            &lt;script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"&gt;&lt;/script&gt;
-            &lt;![endif]--&gt;
-
-    &lt;script async="" src="//www.google-analytics.com/analytics.js"&gt;&lt;/script&gt;&lt;script type="text/javascript" async="" src="//qlma.disqus.com/embed.js"&gt;&lt;/script&gt;&lt;script async="" src="//static.hotjar.com/c/hotjar-77425.js?sv=5"&gt;&lt;/script&gt;&lt;link rel="stylesheet" href="//a.disquscdn.com/next/embed/styles/loading.8023a7350e47171f7bb79707886cd7c5.css" /&gt;&lt;/head&gt;
-
+        &lt;script src="js/angular/angular.js"&gt;&lt;/script&gt;
+        &lt;script src="js/angular/angular-route.js"&gt;&lt;/script&gt;
+        &lt;script src="js/angular/angular-cookies.js"&gt;&lt;/script&gt;
+        &lt;script src="js/app.js"&gt;&lt;/script&gt;
+        &lt;script src="js/index/indexcontroller.js"&gt;&lt;/script&gt;
+        &lt;script src="js/login/logincontroller.js"&gt;&lt;/script&gt;
+        &lt;script src="js/frontpage/frontpagecontroller.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
     &lt;body&gt;
-        
-        &lt;div class="full color1 topslide"&gt;
-            &lt;div class="logo"&gt;
-                &lt;img height="55px" src="img/qlma.png" /&gt;
-            &lt;/div&gt;
-            &lt;div class="date visible-lg"&gt;
-                  Tänään on torstai 20.9.2015
-            &lt;/div&gt;
-            &lt;div class="name text-right"&gt;
-                &lt;a id="menu-toggle" class="visible-xs" href="#menu-toggle"&gt;&lt;i class="fa fa-bars"&gt;&lt;/i&gt;&lt;/a&gt;
-                &lt;span class="visible-lg"&gt;
-                    &lt;img height="25" width="25" class="img-rounded" src="https://pbs.twimg.com/profile_images/524213225026772992/9D216N3W_400x400.jpeg" /&gt;
-                    Janne Gylling
-                    &lt;i class="fa fa-cog fa-inverse"&gt;&lt;/i&gt;  &lt;a href="account.html"&gt;Omat tiedot&lt;/a&gt;    |  
-                    &lt;i class="fa fa-key"&gt;&lt;/i&gt;  &lt;a class="click" href="/client/"&gt;Kirjaudu ulos&lt;/a&gt;   
-                &lt;/span&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
+        &lt;!-- ngView:  --&gt;&lt;div ng-view="" class="ng-scope"&gt;&lt;div class="login-container-background ng-scope" id="login-container"&gt;
+    &lt;img width="150" src="img/qlma.png" id="logo" /&gt;
+    &lt;div ng-controller="LoginController as login" class="login-shadow ng-scope" id="form-area"&gt;
+        &lt;form role="form" ng-submit="login.doLogin()" name="loginForm" class="ng-valid ng-dirty ng-valid-parse ng-submitted"&gt;
+            &lt;span class="form-text"&gt;KÄYTTÄJÄTUNNUS&lt;/span&gt;&lt;br /&gt;
+            &lt;input type="text" value="Matti Meikäläinen" class="form-input ng-valid ng-dirty ng-valid-parse ng-touched" ng-model="login.username" /&gt;
+            &lt;span class="form-text"&gt;SALASANA&lt;/span&gt;&lt;br /&gt;
+            &lt;input type="password" value="" class="form-input ng-valid ng-dirty ng-valid-parse ng-touched" ng-model="login.password" /&gt;
+            &lt;input type="submit" value="KIRJAUDU" class="form-button" /&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
 
-
-        &lt;div id="wrapper"&gt;
-                        &lt;div id="sidebar-wrapper"&gt;
-                &lt;ul class="sidebar-nav"&gt;
-                    &lt;li&gt;
-                        &lt;a href="frontpage.html"&gt;
-                            &lt;i class="fa fa-home"&gt;&lt;/i&gt;
-                            &lt;div&gt;ETUSIVU&lt;/div&gt;
-                        &lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li&gt;
-                        &lt;a href="messages.html"&gt;
-                            &lt;i class="fa fa-envelope-o"&gt;&lt;/i&gt;
-                            &lt;div&gt;VIESTIT&lt;/div&gt;
-                        &lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li&gt;
-                        &lt;a href="events.html"&gt;
-                            &lt;i class="fa fa-calendar"&gt;&lt;/i&gt;
-                            &lt;div&gt;TAPAHTUMAT&lt;/div&gt;
-                        &lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li&gt;
-                        &lt;a href="timetable.html"&gt;
-                            &lt;i class="fa fa-list-alt"&gt;&lt;/i&gt;
-                            &lt;div&gt;LUKUJÄRJESTYS&lt;/div&gt;
-                        &lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li&gt;
-                        &lt;a href="groups.html"&gt;
-                            &lt;i class="fa fa-users"&gt;&lt;/i&gt;
-                            &lt;div&gt;RYHMÄT&lt;/div&gt;
-                        &lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li&gt;
-                        &lt;a href="help.html"&gt;
-                            &lt;i class="fa fa-info-circle"&gt;&lt;/i&gt;
-                            &lt;div&gt;APUA&lt;/div&gt;
-                        &lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li class="visible-xs visible-xs visible-sm visible-md"&gt;
-                        &lt;hr /&gt;
-                    &lt;/li&gt;
-
-
-                    &lt;li class="visible-xs visible-xs visible-sm visible-md"&gt;
-                        &lt;br /&gt;
-                        &lt;i class="fa fa-cog"&gt;&lt;/i&gt;
-                        &lt;a href="account.html"&gt;OMAT TIEDOT&lt;/a&gt;
-                    &lt;/li&gt;
-
-
-
-                    &lt;li class="visible-xs visible-xs visible-sm visible-md"&gt;
-                        &lt;i class="fa fa-key"&gt;&lt;/i&gt;
-                        &lt;a href="/client/"&gt;KIRJAUDU ULOS&lt;/a&gt;
-                    &lt;/li&gt;
-
-
-
-                &lt;/ul&gt;
-            &lt;/div&gt;
-
-
-            &lt;!-- Page Content --&gt;
-            &lt;div id="page-content-wrapper"&gt;
-                                &lt;div class="container-fluid"&gt;
-                    &lt;div class="row"&gt;
-                        &lt;div class="col-lg-12"&gt;
-                            &lt;h1&gt;&lt;i class="fa fa-home"&gt;&lt;/i&gt; Etusivu&lt;/h1&gt;
-                            &lt;p&gt;Tämä on mallikoulun etusivu joka näkyy kirjautumisen jälkeen.&lt;/p&gt;
-                            &lt;br /&gt;&lt;br /&gt;
-                            &lt;div class="panel panel-default"&gt;
-                                &lt;!-- Default panel contents --&gt;
-                                &lt;div class="panel-heading"&gt;Uusimmat viestit&lt;/div&gt;
-                                &lt;!-- Table --&gt;
-                                &lt;table class="table table-striped qlma-table-hover"&gt;
-                                    &lt;tbody&gt;&lt;tr&gt; &lt;th&gt; PVM &lt;/th&gt; &lt;th&gt; AIHE &lt;/th&gt; &lt;th&gt; LÄHETTÄJÄ &lt;/th&gt; &lt;th&gt; KUITTAUS &lt;/th&gt; &lt;th&gt; LIITE FAV &lt;/th&gt; &lt;/tr&gt;
-                                    &lt;tr&gt; &lt;td&gt; 29.07.2015 &lt;/td&gt; &lt;td&gt; Luokanvalvojantunnit peruttu &lt;/td&gt; &lt;td&gt; Liisa Mallinen &lt;/td&gt; &lt;td&gt; ALERT &lt;/td&gt; &lt;td&gt; &lt;/td&gt; &lt;/tr&gt;
-                                    &lt;tr&gt; &lt;td&gt; 28.07.2015 &lt;/td&gt; &lt;td&gt; Luokanvalvojantunnit peruttu &lt;/td&gt; &lt;td&gt; Liisa Mallinen &lt;/td&gt; &lt;td&gt; ALERT &lt;/td&gt; &lt;td&gt; &lt;/td&gt; &lt;/tr&gt;
-                                    &lt;tr&gt; &lt;td&gt; 26.07.2015 &lt;/td&gt; &lt;td&gt; Luokanvalvojantunnit peruttu &lt;/td&gt; &lt;td&gt; Liisa Mallinen &lt;/td&gt; &lt;td&gt; ALERT &lt;/td&gt; &lt;td&gt; &lt;/td&gt; &lt;/tr&gt;
-                                    &lt;tr&gt; &lt;td&gt; 22.07.2015 &lt;/td&gt; &lt;td&gt; Luokanvalvojantunnit peruttu &lt;/td&gt; &lt;td&gt; Liisa Mallinen &lt;/td&gt; &lt;td&gt; ALERT &lt;/td&gt; &lt;td&gt; &lt;/td&gt; &lt;/tr&gt;
-                                    &lt;tr&gt; &lt;td&gt; 21.07.2015 &lt;/td&gt; &lt;td&gt; Luokanvalvojantunnit peruttu &lt;/td&gt; &lt;td&gt; Liisa Mallinen &lt;/td&gt; &lt;td&gt; ALERT &lt;/td&gt; &lt;td&gt; &lt;/td&gt; &lt;/tr&gt;
-                                &lt;/tbody&gt;&lt;/table&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-
-            &lt;/div&gt;
-            &lt;!-- /#page-content-wrapper --&gt;
-
-        &lt;/div&gt;
-        &lt;!-- /#wrapper --&gt;
-        
-        &lt;div class="hide_disqus" id="disqus_thread"&gt;&lt;iframe frameborder="0" width="100%" id="dsq-1" data-disqus-uid="1" allowtransparency="true" scrolling="no" tabindex="0" title="Disqus" style="width: 100% ! important; border: medium none ! important; overflow: hidden ! important; height: 1054px ! important;" src="http://disqus.com/embed/comments/?base=default&amp;amp;version=1938163e5ac6800e1d76f3d06428857d&amp;amp;f=qlma&amp;amp;t_u=http%3A%2F%2Fwww.qlma.fi%2Fclient%2Ffrontpage.html&amp;amp;t_d=Etusivu%20-%20QLMA%20Koulu&amp;amp;t_t=Etusivu%20-%20QLMA%20Koulu&amp;amp;s_o=default#1" horizontalscrolling="no" verticalscrolling="no"&gt;&lt;/iframe&gt;&lt;iframe frameborder="0" id="dsq-indicator-north" data-disqus-uid="indicator-north" allowtransparency="true" scrolling="no" tabindex="0" title="Disqus" style="width: 1002px ! important; border: medium none ! important; overflow: hidden ! important; top: 0px ! important; min-width: 1002px ! important; max-width: 1002px ! important; position: fixed ! important; z-index: 2147483646 ! important; height: 29px ! important; min-height: 29px ! important; max-height: 29px ! important; display: none ! important;"&gt;&lt;/iframe&gt;&lt;iframe frameborder="0" id="dsq-indicator-south" data-disqus-uid="indicator-south" allowtransparency="true" scrolling="no" tabindex="0" title="Disqus" style="width: 1002px ! important; border: medium none ! important; overflow: hidden ! important; bottom: 0px ! important; min-width: 1002px ! important; max-width: 1002px ! important; position: fixed ! important; z-index: 2147483646 ! important; height: 29px ! important; min-height: 29px ! important; max-height: 29px ! important; display: none ! important;"&gt;&lt;/iframe&gt;&lt;/div&gt;
-        &lt;script type="text/javascript"&gt;
-            var disqus_shortname = 'qlma';
-            (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        &lt;/script&gt;
-
-        &lt;!-- jQuery --&gt;
-        &lt;script src="js/jquery.js"&gt;&lt;/script&gt;
-
-        &lt;!-- Bootstrap Core JavaScript --&gt;
-        &lt;script src="js/bootstrap.min.js"&gt;&lt;/script&gt;
-
-        &lt;!-- Menu Toggle Script --&gt;
-        &lt;script&gt;
-            $("#menu-toggle").click(function(e) {
-                e.preventDefault();
-                $("#wrapper").toggleClass("toggled");
-            });
-        &lt;/script&gt;
-        &lt;script&gt;
-            (function(h,o,t,j,a,r){
-                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-                h._hjSettings={hjid:77425,hjsv:5};
-                a=o.getElementsByTagName('head')[0];
-                r=o.createElement('script');r.async=1;
-                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-                a.appendChild(r);
-            })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
-        &lt;/script&gt;
-        &lt;script&gt;
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-            ga('create', 'UA-66882223-2', 'auto');
-            ga('send', 'pageview');
-        &lt;/script&gt;
+    &lt;div id="school-text"&gt;
+        &lt;span&gt;Insert School&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;        
 
     
 
 
 &lt;/body&gt;&lt;/html&gt;</msg>
-<status status="PASS" endtime="20150924 22:51:33.674" starttime="20150924 22:51:33.107"></status>
+<status status="PASS" endtime="20160123 03:44:10.154" starttime="20160123 03:44:09.642"></status>
 </kw>
-<kw type="kw" name="Selenium2Library.Wait Until Page Contains" timeout="">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until `text` appears on current page.</doc>
 <arguments>
 <arg>Etusivu</arg>
 </arguments>
-<status status="PASS" endtime="20150924 22:51:34.202" starttime="20150924 22:51:33.675"></status>
+<status status="PASS" endtime="20160123 03:44:11.900" starttime="20160123 03:44:10.154"></status>
 </kw>
-<status status="PASS" endtime="20150924 22:51:34.202" starttime="20150924 22:51:27.799"></status>
+<status status="PASS" endtime="20160123 03:44:11.901" starttime="20160123 03:44:05.409"></status>
 </kw>
-<doc></doc>
 <tags>
 <tag>core</tag>
 </tags>
-<status status="PASS" endtime="20150924 22:51:34.203" critical="yes" starttime="20150924 22:51:12.604"></status>
+<status status="PASS" endtime="20160123 03:44:11.901" critical="yes" starttime="20160123 03:43:59.707"></status>
 </test>
-<test id="s1-s1-t2" timeout="" name="Navigate to Messages page">
-<kw type="kw" name="qlma_keywords.Go to Messages" timeout="">
-<doc>Logs in a user to the shop. The main page should be open.</doc>
-<arguments>
-</arguments>
-<kw type="kw" name="Selenium2Library.Click Element" timeout="">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=id('sidebar-wrapper')/ul/li[2]/a</arg>
-</arguments>
-<msg timestamp="20150924 22:51:34.208" level="INFO">Clicking element 'xpath=id('sidebar-wrapper')/ul/li[2]/a'.</msg>
-<status status="PASS" endtime="20150924 22:51:35.943" starttime="20150924 22:51:34.207"></status>
-</kw>
-<kw type="kw" name="Selenium2Library.Wait Until Page Contains" timeout="">
-<doc>Waits until `text` appears on current page.</doc>
-<arguments>
-<arg>Viestit</arg>
-</arguments>
-<status status="PASS" endtime="20150924 22:51:36.461" starttime="20150924 22:51:35.944"></status>
-</kw>
-<status status="PASS" endtime="20150924 22:51:36.462" starttime="20150924 22:51:34.206"></status>
-</kw>
-<kw type="teardown" name="qlma_keywords.Clean Up Test" timeout="">
-<doc>Clean up resources when the case ends.</doc>
-<arguments>
-</arguments>
-<kw type="kw" name="BuiltIn.Run Keyword And Ignore Error" timeout="">
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<arguments>
-<arg>Close Browser</arg>
-</arguments>
-<kw type="kw" name="Selenium2Library.Close Browser" timeout="">
-<doc>Closes the current browser.</doc>
-<arguments>
-</arguments>
-<status status="PASS" endtime="20150924 22:51:37.034" starttime="20150924 22:51:36.465"></status>
-</kw>
-<status status="PASS" endtime="20150924 22:51:37.035" starttime="20150924 22:51:36.465"></status>
-</kw>
-<status status="PASS" endtime="20150924 22:51:37.035" starttime="20150924 22:51:36.463"></status>
-</kw>
-<doc></doc>
-<tags>
-<tag>core</tag>
-</tags>
-<status status="PASS" endtime="20150924 22:51:37.035" critical="yes" starttime="20150924 22:51:34.204"></status>
-</test>
-<kw type="teardown" name="qlma_keywords.Clean Up Suite" timeout="">
+<kw type="teardown" name="Clean Up Suite" library="qlma_keywords">
 <doc>All browsers should be closed when the tests end.</doc>
-<arguments>
-</arguments>
-<kw type="kw" name="BuiltIn.Run Keyword And Ignore Error" timeout="">
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
 <arguments>
 <arg>Close All Browsers</arg>
 </arguments>
-<kw type="kw" name="Selenium2Library.Close All Browsers" timeout="">
+<kw name="Close All Browsers" library="Selenium2Library">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<arguments>
-</arguments>
-<status status="PASS" endtime="20150924 22:51:37.038" starttime="20150924 22:51:37.038"></status>
+<status status="PASS" endtime="20160123 03:44:12.471" starttime="20160123 03:44:11.904"></status>
 </kw>
-<status status="PASS" endtime="20150924 22:51:37.039" starttime="20150924 22:51:37.037"></status>
+<status status="PASS" endtime="20160123 03:44:12.471" starttime="20160123 03:44:11.904"></status>
 </kw>
-<status status="PASS" endtime="20150924 22:51:37.039" starttime="20150924 22:51:37.036"></status>
+<status status="PASS" endtime="20160123 03:44:12.471" starttime="20160123 03:44:11.903"></status>
 </kw>
 <doc>Basic tests for Qlma client.</doc>
-<metadata>
-</metadata>
-<status status="PASS" endtime="20150924 22:51:37.039" starttime="20150924 22:51:11.507"></status>
+<status status="PASS" endtime="20160123 03:44:12.471" starttime="20160123 03:43:59.623"></status>
 </suite>
-<doc></doc>
-<metadata>
-</metadata>
-<status status="PASS" endtime="20150924 22:51:37.040" starttime="20150924 22:51:11.458"></status>
+<status status="PASS" endtime="20160123 03:44:12.476" starttime="20160123 03:43:59.603"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="0" pass="2">Critical Tests</stat>
-<stat fail="0" pass="2">All Tests</stat>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
 </total>
 <tag>
-<stat info="" links="" doc="" combined="" pass="2" fail="0">core</stat>
+<stat fail="0" pass="1">core</stat>
 </tag>
 <suite>
-<stat fail="0" pass="2" id="s1" name="Src">Src</stat>
-<stat fail="0" pass="2" id="s1-s1" name="Qlma Tests">Src.Qlma Tests</stat>
+<stat fail="0" id="s1" name="Src" pass="1">Src</stat>
+<stat fail="0" id="s1-s1" name="Qlma Tests" pass="1">Src.Qlma Tests</stat>
 </suite>
 </statistics>
 <errors>
