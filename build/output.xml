@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20160123 04:03:05.448" generator="Robot 3.0 (Python 2.7.10 on darwin)">
+<robot generated="20160125 09:13:10.342" generator="Robot 3.0 (Python 2.7.10 on darwin)">
 <suite source="/Users/jouni.leino/Git/robot-scripts/src" id="s1" name="Src">
 <suite source="/Users/jouni.leino/Git/robot-scripts/src/qlma_tests.robot" id="s1-s1" name="Qlma Tests">
 <kw type="setup" name="Suite Set Up" library="qlma_keywords">
@@ -9,10 +9,10 @@
 <arguments>
 <arg>Starting test</arg>
 </arguments>
-<msg timestamp="20160123 04:03:05.611" level="INFO">Starting test</msg>
-<status status="PASS" endtime="20160123 04:03:05.611" starttime="20160123 04:03:05.611"></status>
+<msg timestamp="20160125 09:13:10.547" level="INFO">Starting test</msg>
+<status status="PASS" endtime="20160125 09:13:10.547" starttime="20160125 09:13:10.547"></status>
 </kw>
-<status status="PASS" endtime="20160123 04:03:05.611" starttime="20160123 04:03:05.611"></status>
+<status status="PASS" endtime="20160125 09:13:10.547" starttime="20160125 09:13:10.547"></status>
 </kw>
 <test id="s1-s1-t1" name="Login to Qlma client">
 <kw name="Open Login Page" library="qlma_keywords">
@@ -23,45 +23,45 @@
 <arg>${SERVER}</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20160123 04:03:05.613" level="INFO">Opening browser 'firefox' to base url 'http://demo.qlma.fi:3000'</msg>
-<status status="PASS" endtime="20160123 04:03:08.195" starttime="20160123 04:03:05.613"></status>
+<msg timestamp="20160125 09:13:10.549" level="INFO">Opening browser 'firefox' to base url 'https://demo.qlma.fi'</msg>
+<status status="PASS" endtime="20160125 09:13:13.081" starttime="20160125 09:13:10.548"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20160123 04:03:08.680" starttime="20160123 04:03:08.195"></status>
+<status status="PASS" endtime="20160125 09:13:13.621" starttime="20160125 09:13:13.081"></status>
 </kw>
 <kw name="Set Selenium Speed" library="Selenium2Library">
 <doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
 <arguments>
 <arg>${DELAY}</arg>
 </arguments>
-<status status="PASS" endtime="20160123 04:03:08.681" starttime="20160123 04:03:08.681"></status>
+<status status="PASS" endtime="20160125 09:13:13.622" starttime="20160125 09:13:13.621"></status>
 </kw>
 <kw name="Title Should Be" library="Selenium2Library">
 <doc>Verifies that current page title equals `title`.</doc>
 <arguments>
 <arg>Qlma client</arg>
 </arguments>
-<msg timestamp="20160123 04:03:09.298" level="INFO">Page title is 'Qlma client'.</msg>
-<status status="PASS" endtime="20160123 04:03:09.298" starttime="20160123 04:03:08.682"></status>
+<msg timestamp="20160125 09:13:14.132" level="INFO">Page title is 'Qlma client'.</msg>
+<status status="PASS" endtime="20160125 09:13:14.132" starttime="20160125 09:13:13.622"></status>
 </kw>
 <kw name="Page Should Contain" library="Selenium2Library">
 <doc>Verifies that current page contains `text`.</doc>
 <arguments>
 <arg>KÄYTTÄJÄTUNNUS</arg>
 </arguments>
-<msg timestamp="20160123 04:03:10.362" level="INFO">Current page contains text 'KÄYTTÄJÄTUNNUS'.</msg>
-<status status="PASS" endtime="20160123 04:03:10.363" starttime="20160123 04:03:09.299"></status>
+<msg timestamp="20160125 09:13:15.190" level="INFO">Current page contains text 'KÄYTTÄJÄTUNNUS'.</msg>
+<status status="PASS" endtime="20160125 09:13:15.190" starttime="20160125 09:13:14.133"></status>
 </kw>
 <kw name="Page Should Contain" library="Selenium2Library">
 <doc>Verifies that current page contains `text`.</doc>
 <arguments>
 <arg>SALASANA</arg>
 </arguments>
-<msg timestamp="20160123 04:03:11.386" level="INFO">Current page contains text 'SALASANA'.</msg>
-<status status="PASS" endtime="20160123 04:03:11.387" starttime="20160123 04:03:10.363"></status>
+<msg timestamp="20160125 09:13:16.212" level="INFO">Current page contains text 'SALASANA'.</msg>
+<status status="PASS" endtime="20160125 09:13:16.212" starttime="20160125 09:13:15.190"></status>
 </kw>
-<status status="PASS" endtime="20160123 04:03:11.387" starttime="20160123 04:03:05.612"></status>
+<status status="PASS" endtime="20160125 09:13:16.212" starttime="20160125 09:13:10.548"></status>
 </kw>
 <kw name="Login User" library="qlma_keywords">
 <doc>Logs in a user to the shop. The main page should be open.</doc>
@@ -75,8 +75,8 @@
 <arg>css=input[type='text']</arg>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20160123 04:03:11.389" level="INFO">Typing text 'jouni' into text field 'css=input[type='text']'</msg>
-<status status="PASS" endtime="20160123 04:03:12.966" starttime="20160123 04:03:11.388"></status>
+<msg timestamp="20160125 09:13:16.214" level="INFO">Typing text 'jouni' into text field 'css=input[type='text']'</msg>
+<status status="PASS" endtime="20160125 09:13:17.793" starttime="20160125 09:13:16.214"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -84,22 +84,23 @@
 <arg>css=input[type='password']</arg>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20160123 04:03:12.967" level="INFO">Typing text 'moikka' into text field 'css=input[type='password']'</msg>
-<status status="PASS" endtime="20160123 04:03:14.550" starttime="20160123 04:03:12.966"></status>
+<msg timestamp="20160125 09:13:17.794" level="INFO">Typing text 'moikka' into text field 'css=input[type='password']'</msg>
+<status status="PASS" endtime="20160125 09:13:19.365" starttime="20160125 09:13:17.793"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>css=input[value='KIRJAUDU']</arg>
 </arguments>
-<msg timestamp="20160123 04:03:14.550" level="INFO">Clicking element 'css=input[value='KIRJAUDU']'.</msg>
-<status status="PASS" endtime="20160123 04:03:15.637" starttime="20160123 04:03:14.550"></status>
+<msg timestamp="20160125 09:13:19.366" level="INFO">Clicking element 'css=input[value='KIRJAUDU']'.</msg>
+<status status="PASS" endtime="20160125 09:13:20.434" starttime="20160125 09:13:19.365"></status>
 </kw>
 <kw name="Log Source" library="Selenium2Library">
 <doc>Logs and returns the entire html source of the current page or frame.</doc>
-<msg timestamp="20160123 04:03:16.149" level="INFO">&lt;!DOCTYPE html&gt;
+<msg timestamp="20160125 09:13:20.947" level="INFO">&lt;!DOCTYPE html&gt;
 &lt;html xmlns="http://www.w3.org/1999/xhtml" lang="en" ng-app="app" class="ng-scope"&gt;&lt;head&gt;&lt;style type="text/css"&gt;@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}&lt;/style&gt;
         &lt;meta charset="utf-8" /&gt;
+        &lt;base href="/" /&gt;
         &lt;meta content="IE=edge" http-equiv="X-UA-Compatible" /&gt;
         &lt;meta content="width=device-width, initial-scale=1" name="viewport" /&gt;
         &lt;meta content="" name="description" /&gt;
@@ -111,24 +112,27 @@
         &lt;link rel="stylesheet" href="css/simple-sidebar.css" /&gt;
         &lt;link rel="stylesheet" href="css/login.css" /&gt;
         &lt;link rel="stylesheet" href="css/style.css" /&gt;
+        &lt;link rel="stylesheet" href="css/font-awesome.css" /&gt;
 
         &lt;script src="js/angular/angular.js"&gt;&lt;/script&gt;
         &lt;script src="js/angular/angular-route.js"&gt;&lt;/script&gt;
         &lt;script src="js/angular/angular-cookies.js"&gt;&lt;/script&gt;
         &lt;script src="js/app.js"&gt;&lt;/script&gt;
-        &lt;script src="js/index/indexcontroller.js"&gt;&lt;/script&gt;
-        &lt;script src="js/login/logincontroller.js"&gt;&lt;/script&gt;
-        &lt;script src="js/frontpage/frontpagecontroller.js"&gt;&lt;/script&gt;
+        &lt;script src="js/factory/apifactory.js"&gt;&lt;/script&gt;
+        &lt;script src="js/controllers/indexcontroller.js"&gt;&lt;/script&gt;
+        &lt;script src="js/controllers/logincontroller.js"&gt;&lt;/script&gt;
+        &lt;script src="js/controllers/frontpagecontroller.js"&gt;&lt;/script&gt;
+        &lt;script src="js/controllers/messagescontroller.js"&gt;&lt;/script&gt;
+        &lt;script src="js/controllers/profilecontroller.js"&gt;&lt;/script&gt;
     &lt;/head&gt;
-    &lt;body&gt;
-        &lt;!-- ngView:  --&gt;&lt;div ng-view="" class="ng-scope"&gt;&lt;div class="login-container-background ng-scope" id="login-container"&gt;
+    &lt;!-- ngView:  --&gt;&lt;body ng-view="" &lt;div="" class="ng-scope"&gt;&lt;div class="login-container-background ng-scope" id="login-container"&gt;
     &lt;img width="150" src="img/qlma.png" id="logo" /&gt;
     &lt;div ng-controller="LoginController as login" class="login-shadow ng-scope" id="form-area"&gt;
         &lt;form role="form" ng-submit="login.doLogin()" name="loginForm" class="ng-valid ng-dirty ng-valid-parse ng-submitted"&gt;
             &lt;span class="form-text"&gt;KÄYTTÄJÄTUNNUS&lt;/span&gt;&lt;br /&gt;
-            &lt;input type="text" value="Matti Meikäläinen" class="form-input ng-valid ng-dirty ng-valid-parse ng-touched" ng-model="login.username" /&gt;
+            &lt;input type="text" value="Matti Meikäläinen" class="form-input ng-valid ng-dirty ng-valid-parse ng-touched" ng-model="login.username" id="username" /&gt;
             &lt;span class="form-text"&gt;SALASANA&lt;/span&gt;&lt;br /&gt;
-            &lt;input type="password" value="" class="form-input ng-valid ng-dirty ng-valid-parse ng-touched" ng-model="login.password" /&gt;
+            &lt;input type="password" value="" class="form-input ng-valid ng-dirty ng-valid-parse ng-touched" ng-model="login.password" id="password" /&gt;
             &lt;input type="submit" value="KIRJAUDU" class="form-button" /&gt;
         &lt;/form&gt;
     &lt;/div&gt;
@@ -136,27 +140,22 @@
     &lt;div id="school-text"&gt;
         &lt;span&gt;Insert School&lt;/span&gt;
     &lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;        
-
-    
-
-
-&lt;/body&gt;&lt;/html&gt;</msg>
-<status status="PASS" endtime="20160123 04:03:16.149" starttime="20160123 04:03:15.637"></status>
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</msg>
+<status status="PASS" endtime="20160125 09:13:20.947" starttime="20160125 09:13:20.434"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until `text` appears on current page.</doc>
 <arguments>
 <arg>Etusivu</arg>
 </arguments>
-<status status="PASS" endtime="20160123 04:03:16.666" starttime="20160123 04:03:16.149"></status>
+<status status="PASS" endtime="20160125 09:13:21.463" starttime="20160125 09:13:20.947"></status>
 </kw>
-<status status="PASS" endtime="20160123 04:03:16.666" starttime="20160123 04:03:11.387"></status>
+<status status="PASS" endtime="20160125 09:13:21.464" starttime="20160125 09:13:16.213"></status>
 </kw>
 <tags>
 <tag>core</tag>
 </tags>
-<status status="PASS" endtime="20160123 04:03:16.666" critical="yes" starttime="20160123 04:03:05.612"></status>
+<status status="PASS" endtime="20160125 09:13:21.464" critical="yes" starttime="20160125 09:13:10.548"></status>
 </test>
 <kw type="teardown" name="Clean Up Suite" library="qlma_keywords">
 <doc>All browsers should be closed when the tests end.</doc>
@@ -167,16 +166,16 @@
 </arguments>
 <kw name="Close All Browsers" library="Selenium2Library">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" endtime="20160123 04:03:17.244" starttime="20160123 04:03:16.669"></status>
+<status status="PASS" endtime="20160125 09:13:22.026" starttime="20160125 09:13:21.467"></status>
 </kw>
-<status status="PASS" endtime="20160123 04:03:17.244" starttime="20160123 04:03:16.669"></status>
+<status status="PASS" endtime="20160125 09:13:22.028" starttime="20160125 09:13:21.466"></status>
 </kw>
-<status status="PASS" endtime="20160123 04:03:17.245" starttime="20160123 04:03:16.668"></status>
+<status status="PASS" endtime="20160125 09:13:22.028" starttime="20160125 09:13:21.466"></status>
 </kw>
 <doc>Basic tests for Qlma client.</doc>
-<status status="PASS" endtime="20160123 04:03:17.245" starttime="20160123 04:03:05.475"></status>
+<status status="PASS" endtime="20160125 09:13:22.028" starttime="20160125 09:13:10.371"></status>
 </suite>
-<status status="PASS" endtime="20160123 04:03:17.250" starttime="20160123 04:03:05.450"></status>
+<status status="PASS" endtime="20160125 09:13:22.031" starttime="20160125 09:13:10.344"></status>
 </suite>
 <statistics>
 <total>

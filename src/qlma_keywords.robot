@@ -8,7 +8,7 @@ Library	Selenium2Library	timeout=${DEFAULT_TIMEOUT}	implicit_wait=${DELAY}
 
 *** Variables ***
 
-${SERVER}        http://demo.qlma.fi:3000
+${SERVER}        https://demo.qlma.fi
 ${VALID USER}    jouni
 ${VALID PASSWD}  moikka
 
